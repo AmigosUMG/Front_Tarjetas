@@ -3,7 +3,7 @@
     <v-row class="text-center">
       <v-col cols="12">
         <v-img
-          :src="require('../assets/FT.png')"
+          :src="require('../assets/fastEn.png')"
           class="my-3"
           contain
           height="350"
@@ -12,32 +12,16 @@
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          ¡Bienvenido a FronTienda!
+          ¡Bienvenido a Flash English!
         </h1>
 
         <p class="subheading font-weight-regular">
-          Una tienda para tí, para todos, 
+          Let's learn, 
           <a class="d-inline pa-2 pink darken-1 white--text">
-            SIN FRONTERAS.
+            ALL TOGETHER!
           </a> 
         </p>
       </v-col>
-
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          ¿Quiénes somos?
-        </h2>
-        <p>
-          FronTienda es una tienda especializada en la comercialización de los productos
-          más importantes y necesarios para los negocios y sus clientes.
-          <br>
-          Con nosotros puedes comprar todo lo que necesites en un sólo instante.
-        </p>
-      </v-col>
-
       <v-col
         class="mb-5"
         cols="12"
@@ -120,21 +104,9 @@
       ],
       importantLinks: [
         {
-          text: 'Vuetify',
-          href: 'https://vuetifyjs.com',
-        },
-        {
-          text: 'Facebook',
-          href: 'https://www.facebook.com/ricardo.fuentes.73307',
-        },
-        {
-          text: 'LinkedIn',
-          href: 'https://www.linkedin.com/in/ricardo-fuentes-9b0a99168',
-        },
-        {
-          text: 'Twitter',
-          href: 'https://twitter.com/vuetifyjs',
-        },
+          text: 'Nuestro Repositorio',
+          href: 'https://github.com/AmigosUMG/Front_Tarjetas',
+        }
       ],
     }),
   }

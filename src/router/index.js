@@ -2,13 +2,13 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 //Importar los Componentes
 import store from '../store/index'
-import Categorias from '../components/Categoria.vue';
 import Login from '../components/Login.vue';
 import HelloWorld from '../components/HelloWorld.vue';
 import Usuarios from '../components/Usuarios.vue';
-import Articulos from '../components/Articulos.vue';
-import Clientes from '../components/Clientes.vue';
-import Fabricas from '../components/Fabricas.vue';
+import Tarjetas from '../components/Tarjetas.vue'
+import TarjetasInteractivasJobs from '../components/TarjetasInteractivasJobs.vue'
+import TarjetasInteractivasAnimals from '../components/TarjetasInteractivasAnimals.vue'
+import TarjetasInteractivasColors from '../components/TarjetasInteractivasColors.vue'
 
 Vue.use(VueRouter)
 
@@ -17,14 +17,6 @@ Vue.use(VueRouter)
     path: '/',
     name: 'HelloWorld',
     component: HelloWorld,
-    meta: {
-      admin: true
-    }
-  },
-  {
-    path: '/categoria',
-    name: 'Categoria',
-    component: Categorias,
     meta: {
       admin: true
     }
@@ -46,27 +38,35 @@ Vue.use(VueRouter)
     }
   },
   {
-    path: '/clientes',
-    name: 'Clientes',
-    component: Clientes,
+    path: '/tarjetas',
+    name: 'Tarjetas',
+    component: Tarjetas,
     meta: {
       admin: true
     }
   },
   {
-    path: '/fabricas',
-    name: 'Fabricas',
-    component: Fabricas,
+    path: '/tarjetasInteractivas/trabajos',
+    name: 'TarjetasInteractivasJobs',
+    component: TarjetasInteractivasJobs,
     meta: {
-      admin: true
+      libre: true
     }
   },
   {
-    path: '/articulos',
-    name: 'Articulos',
-    component: Articulos,
+    path: '/tarjetasInteractivas/animales',
+    name: 'TarjetasInteractivasAnimals',
+    component: TarjetasInteractivasAnimals,
     meta: {
-      admin: true
+      libre: true
+    }
+  },
+  {
+    path: '/tarjetasInteractivas/colores',
+    name: 'TarjetasInteractivasColors',
+    component: TarjetasInteractivasColors,
+    meta: {
+      libre: true
     }
   },
 ]

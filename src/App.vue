@@ -7,59 +7,22 @@
       :clipped="$vuetify.breakpoint.lgAndUp"
       app
       v-if="logueado"
+      color="grey darken-4"
     >
       <v-list dense>
         <template v-if="logueado">
           <!-- Botón de home -->
           <v-list-item :to="{name: 'HelloWorld'}">
             <v-list-item-action>
-              <v-icon>home</v-icon>
+              <v-icon color="white">home</v-icon>
             </v-list-item-action>
             <v-list-item-title>
-              Inicio
+              <h3 style="color: white;">
+                Inicio
+              </h3>
             </v-list-item-title>
           </v-list-item>
           <!-- Fin botón de home -->
-        </template>
-
-        <template v-if="logueado">
-        <!-- Listado agrupado de Almacén -->
-          <v-list-group>
-            <!-- Botón Principal Almacén -->
-            <v-list-item slot="activator">
-              <v-list-item-content>
-                <v-list-item-title>
-                  Almacén
-                </v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-            <!-- Fin botón principal Almacén -->
-            <!-- Categorías -->
-            <v-list-item :to="{name: 'Categoria'}">
-              <v-list-item-action>
-                <v-icon>table_chart</v-icon>
-              </v-list-item-action>
-              <v-list-item-content>
-                <v-list-item-title>
-                  Categorías
-                </v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-            <!-- Fin categorías -->
-            <!-- Artículos -->
-            <v-list-item :to="{name: 'Articulos'}">
-              <v-list-item-action>
-                <v-icon>table_chart</v-icon>
-              </v-list-item-action>
-              <v-list-item-content>
-                <v-list-item-title>
-                  Artículos
-                </v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-            <!-- Fin Artículos -->
-          <!-- Fin listado agrupado de Almacén -->
-          </v-list-group>
         </template>
 
         <template v-if="logueado">
@@ -69,65 +32,71 @@
             <v-list-item slot="activator">
               <v-list-item-content>
                 <v-list-item-title>
-                  Compras
+                  <h3 style="color: white;">
+                    Actividades
+                  </h3>
                 </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
             <!-- Fin botón principal Compras -->
-            <!-- Proveedores -->
-            <v-list-item :to="{name: 'Fabricas'}">
+            <!-- Administración de Tarjetas -->
+            <v-list-item :to="{name: 'Tarjetas'}">
               <v-list-item-action>
-                <v-icon>table_chart</v-icon>
+                <v-icon color="white">table_chart</v-icon>
               </v-list-item-action>
               <v-list-item-content>
                 <v-list-item-title>
-                  Fábricas Proveedoras
+                  <h3 style="color: white;">
+                    Administración de Tarjetas
+                  </h3>
                 </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
-            <!-- Fin Proveedores -->
+            <!-- Fin Administración de Tarjetas -->
+            <!-- Tarjetas Interactivas -->
+            <v-list-item :to="{name: 'TarjetasInteractivasAnimals'}">
+              <v-list-item-action>
+                <v-icon color="white">table_chart</v-icon>
+              </v-list-item-action>
+              <v-list-item-content>
+                <v-list-item-title>
+                  <h3 style="color: white;">
+                    Tarjetas de animales
+                  </h3>
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <!-- Fin Tarjetas Interactivas -->
+            <!-- Tarjetas Interactivas -->
+            <v-list-item :to="{name: 'TarjetasInteractivasColors'}">
+              <v-list-item-action>
+                <v-icon color="white">table_chart</v-icon>
+              </v-list-item-action>
+              <v-list-item-content>
+                <v-list-item-title>
+                  <h3 style="color: white;">
+                    Tarjetas de colores
+                  </h3>
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <!-- Fin Tarjetas Interactivas -->
+            <!-- Tarjetas Interactivas -->
+            <v-list-item :to="{name: 'TarjetasInteractivasJobs'}">
+              <v-list-item-action>
+                <v-icon color="white">table_chart</v-icon>
+              </v-list-item-action>
+              <v-list-item-content>
+                <v-list-item-title>
+                  <h3 style="color: white;">
+                    Tarjetas de trabajos
+                  </h3>
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <!-- Fin Tarjetas Interactivas -->
           </v-list-group>
         <!-- Fin de listado agrupado de Compras -->
-        </template>
-
-        <template v-if="logueado">
-        <!-- Listado agrupado de Ventas -->
-          <v-list-group>
-            <!-- Botón Principal de Ventas -->
-            <v-list-item slot="activator">
-              <v-list-item-content>
-                <v-list-item-title>
-                  Ventas
-                </v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-            <!-- Fin botón principal de Ventas -->
-            <!-- Ventas -->
-            <v-list-item :to="{name: ''}">
-              <v-list-item-action>
-                <v-icon>table_chart</v-icon>
-              </v-list-item-action>
-              <v-list-item-content>
-                <v-list-item-title>
-                  Ventas
-                </v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-            <!-- Fin Ventas -->
-            <!-- Clientes -->
-            <v-list-item :to="{name: 'Clientes'}">
-              <v-list-item-action>
-                <v-icon>table_chart</v-icon>
-              </v-list-item-action>
-              <v-list-item-content>
-                <v-list-item-title>
-                  Clientes
-                </v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-            <!-- Fin Clientes -->
-          </v-list-group>
-        <!-- Fin listado agrupado de Ventas -->
         </template>
 
         <template v-if="logueado">
@@ -137,7 +106,9 @@
             <v-list-item slot="activator">
               <v-list-item-content>
                 <v-list-item-title>
-                  Accesos
+                  <h3 style="color: white;">
+                    Accesos
+                  </h3>
                 </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
@@ -145,11 +116,13 @@
             <!-- Usuarios -->
             <v-list-item :to="{name: 'Usuarios'}">
               <v-list-item-action>
-                <v-icon>table_chart</v-icon>
+                <v-icon color="white">table_chart</v-icon>
               </v-list-item-action>
               <v-list-item-content>
                 <v-list-item-title>
-                  Usuarios
+                  <h3 style="color: white;">
+                    Usuarios
+                  </h3>
                 </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
@@ -157,35 +130,6 @@
           </v-list-group>
         <!-- Fin listado agrupado de Accesos -->
         </template>
-
-        <template v-if="logueado">
-        <!-- Listado agrupado de Consultas -->
-          <v-list-group>
-            <!-- Botón principal de Consultas -->
-            <v-list-item slot="activator">
-              <v-list-item-content>
-                <v-list-item-title>
-                  Consultas
-                </v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-            <!-- Fin botón principal de Consultas -->
-            <!-- Consulta Ventas -->
-            <v-list-item :to="{name: ''}">
-              <v-list-item-action>
-                <v-icon>table_chart</v-icon>
-              </v-list-item-action>
-              <v-list-item-content>
-                <v-list-item-title>
-                  Consulta Ventas
-                </v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-            <!-- Fin Consulta Ventas -->
-          </v-list-group>
-        <!-- Fin de listado agrupado de Consultas -->
-        </template>
-
       </v-list>
     </v-navigation-drawer>
     <!-- Fin del navegador lateral -->
@@ -202,7 +146,7 @@
         class="ml-0 pl-3"
       >
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-        <span class="hidden-sm-and-down">Sistema FronTienda</span>
+        <span class="hidden-sm-and-down">Flash English</span>
       </v-toolbar-title>      
       <v-spacer></v-spacer>
       <v-btn @click="salir()" icon v-if="logueado">
@@ -231,9 +175,9 @@
     <v-footer  height="auto">
       <v-layout justify-center>
         <v-flex text-xs-center>
-          <v-card flat tile color="light-blue accent-4" class="text-center">
+          <v-card flat tile color="orange darken-2" class="text-center">
             <v-card-text class="white--text font-italic">
-              Ingeniería en Sistemas | Ricardo Fuentes &copy; {{new Date().getFullYear()}}
+              Ingeniería en Sistemas | Grupo 1 &copy; {{new Date().getFullYear()}}
             </v-card-text>
           </v-card>
         </v-flex>

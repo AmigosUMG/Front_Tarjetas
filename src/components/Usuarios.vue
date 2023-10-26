@@ -119,7 +119,7 @@ export default {
         usuarios: [],
         headers: [
             { text: 'No.', value: 'id', sortable: true },
-            { text: 'Nombre', value: 'first_name', sortable: true },
+            { text: 'Nombre', value: 'name', sortable: true },
             { text: 'Apellido', value: 'last_name', sortable: false },
             { text: 'Nombre de Usuario', value: 'username', sortable: false },
             { text: 'Email', value: 'email', sortable: false },
@@ -158,7 +158,7 @@ export default {
     methods: {
         listar() {
             let cat = this;
-            axios.get('usuarios/listar/',{headers: {
+            axios.get('user/users/',{headers: {
                 'Authorization': `Token ${this.$store.state.token}`
             }})
             .then((response)=>{
@@ -171,7 +171,7 @@ export default {
 
         editItem (item) {
             this.id = item.id;
-            this.nombre = item.first_name;
+            this.nombre = item.name;
             this.apellido = item.last_name;
             this.username = item.username,
             this.email = item.email,
@@ -200,7 +200,7 @@ export default {
             let cat = this;
             let header = {'Authorization': `Token ${this.$store.state.token}`};
             let configuracion = {headers : header};
-            axios.patch(`usuarios/actualizar/${this.adId}`, {
+            axios.patch(`user/update/${this.adId}/`, {
                 'is_active': true,
             }, configuracion)
             .then((response) => {
@@ -220,7 +220,7 @@ export default {
             let cat = this;
             let header = {'Authorization': `Token ${this.$store.state.token}`};
             let configuracion = {headers : header};
-            axios.patch(`usuarios/actualizar/${this.adId}`, {
+            axios.patch(`user/update/${this.adId}/`, {
                 'is_active': false,
             }, configuracion)
             .then((response) => {
@@ -297,8 +297,8 @@ export default {
 
             if (this.editedIndex > -1) {
                 //Código para editar datos del registro
-                axios.patch(`usuarios/actualizar/${this.id}`, {
-                    'first_name': this.nombre,
+                axios.patch(`user/update/${this.id}/`, {
+                    'name': this.nombre,
                     'last_name': this.apellido,
                     'username': this.username,
                     'email': this.email,
@@ -316,9 +316,9 @@ export default {
                 //Código para guardar un nuevo registro
                 axios({
                     method: 'post',
-                    url: 'usuarios/crear/',
+                    url: 'user/users/',
                     data: {
-                        'first_name': this.nombre,
+                        'name': this.nombre,
                         'last_name': this.apellido,
                         'username': this.username,
                         'email': this.email,
