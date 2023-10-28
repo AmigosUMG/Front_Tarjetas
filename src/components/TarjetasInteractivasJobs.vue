@@ -10,7 +10,7 @@
                     </v-card-text>
                     <v-card-actions>
                         <v-btn color="green" @click="revealCard(card.id)">
-                            <h4 style="color: white;"> Respuesta </h4>
+                            <h4 style="color: white;">Inglés</h4>
                         </v-btn>
                     </v-card-actions>
                 
@@ -31,7 +31,7 @@
                             color="green"
                             @click="hideCard(card.id)"
                             >
-                            Pregunta
+                            Español
                             </v-btn>
                         </v-card-actions>
                         </v-card>
