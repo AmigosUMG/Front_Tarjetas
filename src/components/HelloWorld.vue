@@ -26,23 +26,6 @@
         class="mb-5"
         cols="12"
       >
-        <h2 class="headline font-weight-bold mb-3">
-          Enlaces Importantes
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            <v-btn color="primary">
-              {{ link.text }}
-            </v-btn>
-          </a>
-        </v-row>
       </v-col>
 
       <v-col
@@ -101,12 +84,6 @@
           text: 'awesome-vuetify',
           href: 'https://github.com/vuetifyjs/awesome-vuetify',
         },
-      ],
-      importantLinks: [
-        {
-          text: 'Nuestro Repositorio',
-          href: 'https://github.com/AmigosUMG/Front_Tarjetas',
-        }
       ],
     }),
   }
