@@ -54,6 +54,7 @@ export default {
             errorM: null
         }
     },
+    //login method
     methods: {
         ingresar(){
             axios.post('login/', {
